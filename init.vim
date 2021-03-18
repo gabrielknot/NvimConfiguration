@@ -20,11 +20,20 @@ nnoremap <leader>/ A<cr>
 
 nnoremap <c-f> :find .<cr>
 nnoremap <c-s> :w<cr>
+inoremap <c-s> :w<cr>
 
 nnoremap <S-Up> :m-2<CR>
 nnoremap <S-Down> :m+<CR>
 inoremap <S-Up> <Esc>:m-2<CR>
 inoremap <S-Down> <Esc>:m+<CR>
+
+inoremap " ""<left>
+inoremap ' ''<left>
+inoremap ( ()<left>
+inoremap [ []<left>
+inoremap { {}<left>
+inoremap {<CR> {<CR>}<ESC>O
+inoremap {;<CR> {<CR>};<ESC>O
 
 " JavaComplete Configuration
 nmap <F4> <Plug>(JavaComplete-Imports-AddSmart)
