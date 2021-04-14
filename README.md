@@ -1,2 +1,3 @@
 # NvimConfiguration
-My init.vim neovim.
+My init.vim.
+Neovim configuration file.
