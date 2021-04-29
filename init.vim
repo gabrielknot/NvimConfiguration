@@ -1,5 +1,9 @@
 call plug#begin('~/local/share/nvim/plugged')	
   	Plug 'neoclide/coc.nvim', { 'branch': 'master', 'do': 'yarn install --frozen-lockfile' }
+<<<<<<< HEAD
+=======
+	Plug 'mg979/vim-visual-multi', {'branch': 'master'}
+>>>>>>> 108a2717053ceee61e5fea68576c7a62745328ca
 	Plug 'Yggdroot/indentLine'
 	Plug 'pedrohdz/vim-yaml-folds'
 	Plug 'dense-analysis/ale'
@@ -14,9 +18,12 @@ call plug#end()
 autocmd FileType yaml setlocal ts=2 sts=2 sw=2 expandtab
 "indentLine Pluggin Configuration
 let g:indentLine_char = '⦙'
+<<<<<<< HEAD
 
 nnoremap <c-n> :bn<cr>
 inoremap <c-n> <Esc>:bn<cr>
+=======
+>>>>>>> 108a2717053ceee61e5fea68576c7a62745328ca
 
 set hidden
 set relativenumber
