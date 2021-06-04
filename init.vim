@@ -1,27 +1,30 @@
 call plug#begin('~/local/share/nvim/plugged')	
-  	Plug 'neoclide/coc.nvim', { 'branch': 'master', 'do': 'yarn install --frozen-lockfile' }
-
 	Plug 'mg979/vim-visual-multi', {'branch': 'master'}
 	Plug 'Yggdroot/indentLine'
 	Plug 'pedrohdz/vim-yaml-folds'
 	Plug 'dense-analysis/ale'
-	Plug 'nvim-treesitter/nvim-treesitter'
 	Plug 'junegunn/vim-easy-align'
 	Plug 'Dinduks/vim-java-get-set'
 	Plug 'artur-shaik/vim-javacomplete2'
 	Plug 'iamcco/mathjax-support-for-mkdp'
-	Plug 'iamcco/markdown-preview.vim'
+	Plug 'dracula/vim', { 'as': 'dracula' }
 call plug#end()
+"Theme
+packadd! dracula
+syntax enable
+colorscheme dracula
 "YAML SYTAX
 autocmd FileType yaml setlocal ts=2 sts=2 sw=2 expandtab
 "indentLine Pluggin Configuration
-let g:indentLine_char = '⦙'
+let g:indentLine_char = '|'
+"let g:indentLine_char = '⦙'
 
+nnoremap <c-C>"+Y<cr>
 
 nnoremap <c-n> :bn<cr>
 inoremap <c-n> <Esc>:bn<cr>
 
-
+highlight Normal ctermfg=grey ctermbg=black
 set hidden
 set relativenumber
 set inccommand=split
@@ -46,8 +49,11 @@ nnoremap <c-f> :find .<cr>:set relativenumber<cr>:set modifiable<cr>
 nnoremap <c-s> :w<cr>
 inoremap <c-s> <Esc>:w<cr>
 
-nnoremap <S-b> :earlier 30s<CR>
-nnoremap <S-f> :later 30s<CR>
+nnoremap <S-b> :earlier 5s<CR>
+nnoremap <S-f> :later 5s>
+nnoremap <S-t> :args *<CR>:tab all<CR>
+nnoremap <S-k> :tabp<CR>:set relativenumber<CR>
+nnoremap <S-j> :tabn<CR>:set relativenumber<CR>
 
 nnoremap <S-h> :set relativenumber<CR>
 
