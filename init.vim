@@ -8,7 +8,25 @@ call plug#begin('~/local/share/nvim/plugged')
 	Plug 'artur-shaik/vim-javacomplete2'
 	Plug 'iamcco/mathjax-support-for-mkdp'
 	Plug 'dracula/vim', { 'as': 'dracula' }
+	" Track the engine.
+	Plug 'SirVer/ultisnips'
+
+	" Snippets are separated from the engine. Add this if you want them:
+	Plug 'honza/vim-snippets'
+	Plug 'ervandew/supertab'
 call plug#end()
+"utilsnipeds
+let g:UltiSnipsExpandTrigger="<tab>"
+let g:UltiSnipsJumpForwardTrigger="<c-b>"
+let g:UltiSnipsJumpBackwardTrigger="<c-z>"
+"let g:ycm_key_list_select_completion = ['<C-p>','Down']
+"let g:ycm_key_list_previous_completion = ['<C-p>','Up']
+"let g:SuperTabDefaultCompletionType = '<C-n>'
+"let g:UltiSnipsExpandTrigger="<tab>"
+"let g:UltiSnipsListSnippets="<S-Z>"
+"let g:UtilSnipsJumpForwardTrigger = "<tab>"
+"let g:UtilSnipsJumpBackwardTrigger = "<s-tab>"
+
 "Theme
 packadd! dracula
 syntax enable
@@ -27,6 +45,7 @@ inoremap <c-n> <Esc>:bn<cr>
 highlight Normal ctermfg=grey ctermbg=black
 set hidden
 set relativenumber
+set nu!
 set inccommand=split
 
 
