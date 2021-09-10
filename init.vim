@@ -53,6 +53,11 @@ set inccommand=split
 
 
 let mapleader="\<space>"
+nnoremap <leader> h 
+
+nnoremap <leader>md :next *.md<CR>:tab sball<CR>
+nnoremap <leader>py :next *.py<CR>:tab sball<CR>
+
 nnoremap <leader>; A;<esc>
 nnoremap <leader>ev :vsplit ~/.config/nvim/init.vim<CR>
 nnoremap <leader>sv :source ~/.config/nvim/init.vim<CR>
@@ -85,6 +90,7 @@ inoremap <S-Up> <Esc>:m-2<CR>i
 inoremap <S-Down> <Esc>:m+<CR>i
 
 nnoremap <S-s> :JCgenerateAccessorSetterGetter<CR>
+
 " JavaComplete Configuration
 nmap <F4> <Plug>(JavaComplete-Imports-AddSmart)
 
