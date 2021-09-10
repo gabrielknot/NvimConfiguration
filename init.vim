@@ -54,8 +54,8 @@ set inccommand=split
 
 let mapleader="\<space>"
 nnoremap <leader>; A;<esc>
-nnoremap <leader>ev :vsplit ~/.config/nvim/init.vim<cr>
-nnoremap <leader>sv :source ~/.config/nvim/init.vim<cr>
+nnoremap <leader>ev :vsplit ~/.config/nvim/init.vim<CR>
+nnoremap <leader>sv :source ~/.config/nvim/init.vim<CR>
 
 nnoremap <leader>/ A<cr>
 inoremap " ""<left>
@@ -72,7 +72,7 @@ nnoremap <c-s> :w<cr>
 inoremap <c-s> <Esc>:w<cr>
 
 nnoremap <S-b> :earlier 5s<CR>
-nnoremap <S-f> :later 5s>
+nnoremap <S-f> :later 5s<CR>
 nnoremap <S-t> :args *<CR>:tab all<CR>
 nnoremap <S-k> :tabp<CR>:set relativenumber<CR>
 nnoremap <S-j> :tabn<CR>:set relativenumber<CR>
