@@ -1,4 +1,5 @@
 call plug#begin('~/local/share/nvim/plugged')	
+  Plug 'neoclide/coc.nvim', {'branch': 'release'}
 	Plug 'mg979/vim-visual-multi', {'branch': 'master'}
 	Plug 'Yggdroot/indentLine'
 	Plug 'pedrohdz/vim-yaml-folds'
@@ -36,6 +37,7 @@ syntax enable
 colorscheme dracula
 "YAML SYTAX
 autocmd FileType yaml setlocal ts=2 sts=2 sw=2 expandtab
+set tabstop=2 shiftwidth=2 expandtab
 "indentLine Pluggin Configuration
 let g:indentLine_char = '|'
 "let g:indentLine_char = '⦙'
@@ -72,7 +74,8 @@ inoremap { {}<left>
 inoremap {<CR> {<CR>}<ESC>O
 inoremap {;<CR> {<CR>};<ESC>O
 
-nnoremap <c-f> :find .<cr>:set relativenumber<cr>:set modifiable<cr>
+nnoremap <c-f> :vsplit .<cr>70<c-w><
+"""":find .<cr>:set relativenumber<cr>:set modifiable<cr>70<C-w>-
 nnoremap <c-s> :w<cr>
 inoremap <c-s> <Esc>:w<cr>
 
@@ -88,6 +91,8 @@ nnoremap <S-Down> :m+<CR>
 nnoremap <S-Up> :m-2<CR>
 inoremap <S-Up> <Esc>:m-2<CR>i
 inoremap <S-Down> <Esc>:m+<CR>i
+vnoremap <expr> m <Esc>:'<,'>m-2
+vnoremap <expr> m <Esc>:'<,'>m+
 
 nnoremap <S-s> :JCgenerateAccessorSetterGetter<CR>
 
