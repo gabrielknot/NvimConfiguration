@@ -2,7 +2,9 @@
 snippet	step	"Step"	!bm
 	  - ${1:id}: ${2:step_id}
 			${3:shell}: ${4:bash}
-			  ${5:run]}: ${{ github.action_path }}/$2.sh
+			${5:run}: ${{ github.action_path }}/$2.sh
+			${6:env}: 
+				${7:ENVIRONMENT_NAME}: ${{ ${8:inputs}.${9:inputName} }}
 
 endsnippet
 snippet	action	"Action"	!bm
