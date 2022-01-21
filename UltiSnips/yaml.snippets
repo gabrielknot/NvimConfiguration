@@ -1,3 +1,28 @@
+# Github Actions
+snippet	step	"Step"	!bm
+	  - ${1:id}: ${2:step_id}
+			${3:shell}: ${4:bash}
+			  ${5:run]}: ${{ github.action_path }}/$2.sh
+
+endsnippet
+snippet	action	"Action"	!bm
+name: ${1:Action Name}
+description: $1 - ${2:Description}
+inputs:
+  ${3:inputName}:
+    description: $3 - ${4:InputDescrption}
+    required: ${5:false}
+    default: ${6:''}
+
+
+runs:
+  using: ${7:'composite'}
+  steps:
+	  - ${8:name}: ${9:Step Name}
+			${10:shell}: ${11:bash}
+
+endsnippet
+# Kubernetes
 snippet	dep	"Deployment"	!bm
 apiVersion: apps/v1
 kind: Deployment
