@@ -1,4 +1,6 @@
 call plug#begin('~/local/share/nvim/plugged')	
+  Plug 'tpope/vim-fugitive'
+  Plug 'junegunn/gv.vim'
   Plug 'neoclide/coc.nvim', {'branch': 'release'}
 	Plug 'mg979/vim-visual-multi', {'branch': 'master'}
 	Plug 'Yggdroot/indentLine'
@@ -11,16 +13,56 @@ call plug#begin('~/local/share/nvim/plugged')
 	Plug 'dracula/vim', { 'as': 'dracula' }
 	" Track the engine.
 	Plug 'SirVer/ultisnips'
+  Plug 'preservim/nerdcommenter'
 
 	" Snippets are separated from the engine. Add this if you want them:
 	Plug 'honza/vim-snippets'
 	Plug 'ervandew/supertab'
-	Plug 'Valloric/YouCompleteMe'
+	Plug 'kien/ctrlp.vim'
 call plug#end()
+"ctrlp
+"let g:ctrlp_map = '<c-p>'
+let g:ctrlp_cmd = 'CtrlP'
+
+"nerdCommander
+"" Create default mappings
+let g:NERDCreateDefaultMappings = 1
+
+" Add spaces after comment delimiters by default
+let g:NERDSpaceDelims = 1
+
+" Use compact syntax for prettified multi-line comments
+let g:NERDCompactSexyComs = 1
+
+" Align line-wise comment delimiters flush left instead of following code indentation
+let g:NERDDefaultAlign = 'left'
+
+" Set a language to use its alternate delimiters by default
+let g:NERDAltDelims_java = 1
+
+" Add your own custom formats or override the defaults
+let g:NERDCustomDelimiters = { 'c': { 'left': '/**','right': '*/' } }
+
+" Allow commenting and inverting empty lines (useful when commenting a region)
+let g:NERDCommentEmptyLines = 1
+
+" Enable trimming of trailing whitespace when uncommenting
+let g:NERDTrimTrailingWhitespace = 1
+
+" Enable NERDCommenterToggle to check all selected lines is commented or not 
+let g:NERDToggleCheckAllLines = 1
 "utilsnipeds
-let g:ycm_key_list_select_completion = ['<C-n>', '<Down>']
-let g:ycm_key_list_previous_completion = ['<C-p>', '<Up>']
-let g:SuperTabDefaultCompletionType = '<C-n>'
+"let g:UltiSnipsExpandTrigger="<tab>"
+let g:UltiSnipsJumpForwardTrigger="<c-b>"
+let g:UltiSnipsJumpBackwardTrigger="<c-z>"
+let g:UltiSnipsListSnippets="<c-tab>"
+
+
+""let g:UltiSnipsSnippetDirectories=[$HOME.'/.config/nvim/UltiSnips']
+""let g:UltiSnipsUsePythonVersion = 3
+""let g:ycm_key_list_select_completion = ['<C-n>', '<Down>']
+""let g:ycm_key_list_previous_completion = ['<C-p>', '<Up>']
+""let g:SuperTabDefaultCompletionType = '<C-n>'
 
 let g:UltiSnipsExpandTrigger="<tab>"
 "let g:ycm_key_list_select_completion = ['<C-p>','Down']
@@ -30,6 +72,8 @@ let g:UltiSnipsExpandTrigger="<tab>"
 "let g:UltiSnipsListSnippets="<S-Z>"
 let g:UtilSnipsJumpForwardTrigger = "<tab>"
 let g:UtilSnipsJumpBackwardTrigger = "<s-tab>"
+nnoremap GV :GV!<CR>
+nnoremap gv :GV<CR>
 
 "Theme
 packadd! dracula
