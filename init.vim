@@ -1,7 +1,7 @@
 call plug#begin('~/local/share/nvim/plugged')	
-  Plug 'tpope/vim-fugitive'
-  Plug 'junegunn/gv.vim'
-  Plug 'neoclide/coc.nvim', {'branch': 'release'}
+	Plug 'tpope/vim-fugitive'
+	Plug 'junegunn/gv.vim'
+	Plug 'neoclide/coc.nvim', {'branch': 'release'}
 	Plug 'mg979/vim-visual-multi', {'branch': 'master'}
 	Plug 'Yggdroot/indentLine'
 	Plug 'pedrohdz/vim-yaml-folds'
@@ -13,12 +13,13 @@ call plug#begin('~/local/share/nvim/plugged')
 	Plug 'dracula/vim', { 'as': 'dracula' }
 	" Track the engine.
 	Plug 'SirVer/ultisnips'
-  Plug 'preservim/nerdcommenter'
+	Plug 'preservim/nerdcommenter'
 
 	" Snippets are separated from the engine. Add this if you want them:
 	Plug 'honza/vim-snippets'
 	Plug 'ervandew/supertab'
 	Plug 'kien/ctrlp.vim'
+	Plug 'Valloric/YouCompleteMe'
 call plug#end()
 "ctrlp
 "let g:ctrlp_map = '<c-p>'
